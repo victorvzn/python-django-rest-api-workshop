@@ -1,0 +1,120 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$PYETTqAwu6wErI8316xU97$hNwYBRtVtz8nsw5vzkKAxMmwrKfQrAXLJFyUrO0GUH0=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-07-24T15:02:43.265Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+
+  { "model": "bandas.genero", "pk": 1, "fields": { "nombre": "Rock" } },
+  { "model": "bandas.genero", "pk": 2, "fields": { "nombre": "Pop Rock" } },
+  { "model": "bandas.genero", "pk": 3, "fields": { "nombre": "Rock progresivo" } },
+  { "model": "bandas.genero", "pk": 4, "fields": { "nombre": "Rock alternativo" } },
+  { "model": "bandas.genero", "pk": 5, "fields": { "nombre": "Rock gótico" } },
+  { "model": "bandas.genero", "pk": 6, "fields": { "nombre": "Punk rock" } },
+  { "model": "bandas.genero", "pk": 7, "fields": { "nombre": "Post-punk" } },
+  { "model": "bandas.genero", "pk": 8, "fields": { "nombre": "Rock fusión" } },
+
+  {
+    "model": "bandas.banda",
+    "pk": 1,
+    "fields": {
+      "nombre": "Arena Hash",
+      "genero": 2,
+      "portada": "https://placehold.co/300x300?text=Arena+Hash"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 2,
+    "fields": {
+      "nombre": "Fragil",
+      "genero": 3,
+      "portada": "https://placehold.co/300x300?text=Fragil"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 3,
+    "fields": {
+      "nombre": "Miki González",
+      "genero": 8,
+      "portada": "https://placehold.co/300x300?text=Miki+Gonzalez"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 4,
+    "fields": {
+      "nombre": "Mar de Copas",
+      "genero": 4,
+      "portada": "https://placehold.co/300x300?text=Mar+de+Copas"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 5,
+    "fields": {
+      "nombre": "Libido",
+      "genero": 4,
+      "portada": "https://placehold.co/300x300?text=Libido"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 6,
+    "fields": {
+      "nombre": "Dolores Delirio",
+      "genero": 5,
+      "portada": "https://placehold.co/300x300?text=Dolores+Delirio"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 7,
+    "fields": {
+      "nombre": "Leusemia",
+      "genero": 6,
+      "portada": "https://placehold.co/300x300?text=Leusemia"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 8,
+    "fields": {
+      "nombre": "Voz Propia",
+      "genero": 7,
+      "portada": "https://placehold.co/300x300?text=Voz+Propia"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 9,
+    "fields": {
+      "nombre": "La Liga del Sueño",
+      "genero": 4,
+      "portada": "https://placehold.co/300x300?text=La+Liga+del+Sueno"
+    }
+  },
+  {
+    "model": "bandas.banda",
+    "pk": 10,
+    "fields": {
+      "nombre": "Trémolo",
+      "genero": 1,
+      "portada": "https://placehold.co/300x300?text=Tremolo"
+    }
+  }
+]
