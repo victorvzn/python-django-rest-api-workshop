@@ -2,7 +2,8 @@
 
 > [!NOTE] 
 > Esta es la versión base para el taller de Django y Django REST Framework
->  La version completa se encuentra en la rama [api-rest](https://github.com/victorvzn/python-django-rest-api-workshop/tree/api-rest)
+> 
+> La version completa se encuentra en la rama [api-rest](https://github.com/victorvzn/python-django-rest-api-workshop/tree/api-rest)
 
 * Bootcamp: Desarrollo Web FullStack con Python Elearning
 * Temas: Python, Django, API Rest
