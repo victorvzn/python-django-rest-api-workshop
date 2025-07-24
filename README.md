@@ -37,3 +37,9 @@
   ```bash
   http://127.0.0.1:8000/admin/
   ```
+
+  ## Links
+
+  * [Django](https://www.djangoproject.com/)
+  * [Django REST Framework](https://www.django-rest-framework.org/)
+  * [Python](https://www.python.org/)
