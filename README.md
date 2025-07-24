@@ -14,9 +14,11 @@
   ```bash
   python --version
   ```
-* [ ] 2. Creamos y activamos el entorno virtual
+* [ ] 2. Creamos el entorno virtual para python, activamos e instalamos las dependencias de Python y Django
   ```bash
   python -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
   ```
 * [ ] Ahora generemos la primera migracion que incluye el modelo Banda
   ```bash
