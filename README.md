@@ -47,3 +47,5 @@
   * [Django](https://www.djangoproject.com/)
   * [Django REST Framework](https://www.django-rest-framework.org/)
   * [Python](https://www.python.org/)
+     
+  | Docente: Victor Villazón - Julio 2025
