@@ -1,0 +1,72 @@
+# 🧾 GENEROS
+
+### Obtener todos los géneros (primera página)
+GET http://localhost:8000/api/v1/generos/
+
+### Obtener todos los géneros (paginacion con offset y limit)
+GET http://localhost:8000/api/v1/generos/?limit=5&offset=5
+
+### Obtener todos los géneros (paginacion con page)
+GET http://localhost:8000/api/v1/generos/?page=1
+
+### Crear un nuevo género
+POST http://localhost:8000/api/v1/generos/
+Content-Type: application/json
+
+{
+  "nombre": "Rock Test 1"
+}
+
+### Obtener un género por ID
+GET http://localhost:8000/api/v1/generos/10/
+
+
+### Actualizar un género por ID
+PUT http://localhost:8000/api/v1/generos/10/
+Content-Type: application/json
+
+{
+  "nombre": "Rock Test - modificado"
+}
+
+### Eliminar un género por ID
+DELETE http://localhost:8000/api/v1/generos/10/
+
+
+
+# 🎸 BANDAS
+
+### Obtener todas las bandas
+GET http://localhost:8000/api/v1/bandas/
+
+### Obtener todas las bandas (paginacion con offset y limit)
+GET http://localhost:8000/api/v1/bandas/?limit=5&offset=5
+
+### Obtener todas las bandas (paginacion con page)
+GET http://localhost:8000/api/v1/bandas/?page=1
+
+### Crear una nueva banda
+POST http://localhost:8000/api/v1/bandas/
+Content-Type: application/json
+
+{
+  "nombre": "Arena Hash 2.0",
+  "genero_id": 1,
+  "portada": "https://placehold.co/300x300?text=Arena+Hash+2.0"
+}
+
+### Obtener una banda por ID
+GET http://localhost:8000/api/v1/bandas/1/
+
+### Actualizar una banda por ID
+PUT http://localhost:8000/api/v1/bandas/1/
+Content-Type: application/json
+
+{
+  "nombre": "Arena Hash 3.0",
+  "genero_id": 8,
+  "portada": "https://placehold.co/300x300?text=Arena+Hash+3.0"
+}
+
+### Eliminar una banda por ID
+DELETE http://localhost:8000/api/v1/bandas/11/

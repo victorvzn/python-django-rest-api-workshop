@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing API REST</title>
+</head>
+<body>
+  <h1>Testing API REST</h1>
+
+  <h3>Generos</h3>
+  <ul id="generos"></ul>
+  <button id="generos-prev">Prev</button>
+  <button id="generos-next">Next</button> 
+
+  <h3>Bandas</h3>
+  <ul id="bandas"></ul>
+  <button id="bandas-prev">Prev</button>
+  <button id="bandas-next">Next</button> 
+
+  <script>
+    const elGeneros = document.getElementById('generos');
+    const elGenerosPrev = document.getElementById('generos-prev');
+    const elGenerosNext = document.getElementById('generos-next');
+
+    let generosMeta = {}; // Guardamos la metadata de paginación
+
+    const renderGeneros = (data, meta) => {
+      generosMeta = meta;
+      elGeneros.innerHTML = '';
+
+      data.forEach(genero => {
+        const li = document.createElement('li');
+        li.innerHTML = `#${genero.id} - ${genero.nombre}`;
+        elGeneros.appendChild(li);
+      });
+    }
+
+    elGenerosPrev.addEventListener('click', () => {
+      if (!generosMeta.previous) return;
+
+      fetch(generosMeta.previous)
+        .then(res => res.json())
+        .then(data => renderGeneros(data.results, data));
+    });
+
+    elGenerosNext.addEventListener('click', () => {
+      if (!generosMeta.next) return;
+
+      fetch(generosMeta.next)
+        .then(res => res.json())
+        .then(data => renderGeneros(data.results, data));
+    });
+
+    // Primera carga
+    fetch('http://localhost:8000/api/v1/generos/?limit=5')
+      .then(res => res.json())
+      .then(data => renderGeneros(data.results, data));
+  </script>
+
+  <script>
+    const elBandas = document.getElementById('bandas');
+    const elBandasPrev = document.getElementById('bandas-prev');
+    const elBandasNext = document.getElementById('bandas-next');
+
+    let bandasMeta = {}; // Guardamos la metadata de paginación
+
+    const renderBandas = (data, meta) => {
+      bandasMeta = meta;
+      elBandas.innerHTML = '';
+
+      data.forEach(banda => {
+        const li = document.createElement('li');
+        li.innerHTML = `#${banda.id} - ${banda.nombre} (${banda.genero.nombre})`;
+        elBandas.appendChild(li);
+      });
+    }
+
+    elBandasPrev.addEventListener('click', () => {
+      if (!bandasMeta.previous) return;
+
+      fetch(bandasMeta.previous)
+        .then(res => res.json())
+        .then(data => renderBandas(data.results, data));
+    });
+
+    elBandasNext.addEventListener('click', () => {
+      if (!bandasMeta.next) return;
+
+      fetch(bandasMeta.next)
+        .then(res => res.json())
+        .then(data => renderBandas(data.results, data));
+    });
+
+    fetch('http://localhost:8000/api/v1/bandas/?limit=5')
+      .then(res => res.json())
+      .then(data => renderBandas(data.results, data));
+  </script>
+</body>
+</html>
